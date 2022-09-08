@@ -4,12 +4,12 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DATABASE_TYPE');
+$CFG->dbtype    = getenv('mariadb');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('DATABASE_HOST');
-$CFG->dbname    = getenv('DATABASE_NAME');
-$CFG->dbuser    = getenv('DATABASE_USER');
-$CFG->dbpass    = getenv('DATABASE_PASSWORD');
+$CFG->dbhost    = getenv('184.169.208.182');
+$CFG->dbname    = getenv('moodledb');
+$CFG->dbuser    = getenv('admin1');
+$CFG->dbpass    = getenv('MyNewPass1!');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -17,8 +17,8 @@ $CFG->dboptions = array (
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('WWWROOT');
-$CFG->dataroot  = getenv('DATAROOT');
+$CFG->wwwroot   = getenv('http://mymoodles.herokuapp.com/');
+$CFG->dataroot  = getenv('/tmp');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
